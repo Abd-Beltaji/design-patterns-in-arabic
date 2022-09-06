@@ -34,24 +34,19 @@ Software_](https://github.com/Abd-Beltaji/design-patterns-in-arabic/blob/master/
 
 ### حسب الغاية:
 
-- <u>**Creational:**</u>
-
+- **Creational:**
 تهتم بالكيفية التي يتم من خلالها إنشاء ال Objects و ال Classs.
 
-- <u>**Structural:**</u>
-
+- **Structural:**
 تهتم بتكوين ال Objects و ال Classes.
 
-- <u>**Beahavioral:**</u>
-
+- **Beahavioral:**
 تهتم بالتفاعل بين ال Objects و ال Classes بالإضافة إلى أنها تهتم بالمسؤواليات الخاصة بكل منها.
 
 ### حسب المجال:
 
-- <u>**مجال ال Class:**</u>
-
+- **مجال ال Class:**
 توضح العلاقات بين ال classes و ال classes الفرعية، ويتم تعريفها بشكل `static`.
 
-- <u>**مجال ال Object:**</u>
-
+- **مجال ال Object:**
 توضح العلاقات بين ال Objects ، ويتم تعريفها بشكل `dynamic`.

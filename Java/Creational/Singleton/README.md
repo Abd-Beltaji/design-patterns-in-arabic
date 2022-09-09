@@ -73,7 +73,7 @@ public static void main (String[]args)
 
 لذلك، وبعد تغير هيكلية الكود باستخدام Singleton Design Pattern:
 
-> يمكن  تحميل الكود كاملاً من <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FAbd-Beltaji%2Fdesign-patterns-in-arabic%2Ftree%2Fmaster%2FJava%2FCreational%2FSingleton%2FExamples%2FRandom" target="_blank">هنا</a>
+> يمكن  تحميل الكود كاملاً من <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FAbd-Beltaji%2Fdesign-patterns-in-arabic%2Ftree%2Fmaster%2FJava%2FCreational%2FSingleton%2FExamples%2FRandom">هنا</a>
 
 ```Java
 class Random {

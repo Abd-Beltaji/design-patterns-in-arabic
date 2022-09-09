@@ -12,7 +12,7 @@
 
 ## تنفيذ المثال 🌡
 
-> يمكنك تحميل الكود كامل من <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FAbd-Beltaji%2Fdesign-patterns-in-arabic%2Ftree%2Fmaster%2FJava%2FBehavioural%2FObserver%2FExamples%2FWeather" targe="_blank">هنا</a>
+> يمكنك تحميل الكود كامل من <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FAbd-Beltaji%2Fdesign-patterns-in-arabic%2Ftree%2Fmaster%2FJava%2FBehavioural%2FObserver%2FExamples%2FWeather">هنا</a>
 
 _WeatherType.java_ :
 

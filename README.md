@@ -2,6 +2,16 @@
 
 <img src="https://github.com/Abd-Beltaji/design-patterns-in-arabic/raw/master/assets/Banner.svg" alt="Design patterns">
 
+<p align="center">
+    <img src="https://badgen.net/github/license/Abd-Beltaji/design-patterns-in-arabic" alt="License"/>
+    <img src="https://badgen.net/github/commits/Abd-Beltaji/design-patterns-in-arabic" alt="Commits"/>
+    <img src="https://badgen.net/github/stars/Abd-Beltaji/design-patterns-in-arabic" alt="Stars"/>
+    <img src="https://badgen.net/github/forks/Abd-Beltaji/design-patterns-in-arabic" alt="Forks"/>
+    <img src="https://badgen.net/github/last-commit/Abd-Beltaji/design-patterns-in-arabic" alt="Last Commit"/>
+    <img src="http://hits.dwyl.com/Abd-Beltaji/design-patterns-in-arabic.svg" alt="Hits"/>
+    <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="Contributions (Welcome)"/>
+</p>
+
 > <u>تعريف **Design patterns:**</u> هي عبارة عن حلول لمشاكل متكررة، وتشكل قواعد إرشادية لكيفية التعامل مع تلك المشاكل المحددة.
 
 > هي ليست عبارة عن `Classes` ولا `Packages` ولا أي مكتبات أو أكواد جاهزة بحيث يتم استخدامها مباشرة بداخل الكود الخاص بك، في المقابل ما هي إلا أساليب متبعة لحل المشاكل المتكررة التي يمكن أن تواجهها خلال عملية كتابة الكود.
@@ -100,11 +110,11 @@ public class Random {
 فلو جربنا الكود السابق :
 
 ```JAVA
-public static void main (String[]args)
+public static void main (String[] args)
 {
     Random rand1 = new Random();
     System.out.println(rand1.getRandInteger(1, 5));
-    Random rand2 = new Random();    
+    Random rand2 = new Random();
     System.out.println(rand2.getRandInteger(8, 50));
     Random rand3 = new Random();
     System.out.println(rand3.getRandInteger(7, 9));
@@ -129,7 +139,7 @@ public static void main (String[]args)
 {
     Random rand1 = new Random();
     System.out.println(rand1.getRandInteger(1, 5));
-    Random rand2 = new Random();    
+    Random rand2 = new Random();
     System.out.println(rand2.getRandInteger(1, 5));
     Random rand3 = new Random();
     System.out.println(rand3.getRandInteger(1, 5));

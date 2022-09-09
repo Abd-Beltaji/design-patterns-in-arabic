@@ -1,5 +1,3 @@
-package Java.Behavioural.Observer.Examples.Weather;
-
 public class Main {
     public static void main(String[] args) {
         Weather weatherProvider = new Weather();

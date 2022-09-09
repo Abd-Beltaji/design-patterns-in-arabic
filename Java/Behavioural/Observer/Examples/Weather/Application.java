@@ -1,5 +1,3 @@
-package Java.Behavioural.Observer.Examples.Weather;
-
 public class Application implements WeatherObserver {
     private Weather provider;
 

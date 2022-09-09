@@ -1,5 +1,3 @@
-package Java.Behavioural.Observer.Examples.Weather;
-
 import java.util.ArrayList;
 import java.util.List;
 

@@ -772,8 +772,8 @@ The Weather has changed to: SUNNY
 - [design_patterns_in_typescript](https://github.com/torokmark/design_patterns_in_typescript) _( Github repository )_
 - [Java Design patterns](https://java-design-patterns.com/) _( Complete Guide )_
 - [Refactoring Guru-Design patterns](https://refactoring.guru/design-patterns) _( Complete Guide )_
-
 - [Design Patterns: Elements of Reusable Object-Oriented Software](https://github.com/Abd-Beltaji/design-patterns-in-arabic/blob/master/resources/Gang%20of%20Four%20-%20Design%20Patterns%20-%20Elements%20of%20Reusable%20Object-Oriented%20Software.pdf) _( Book )_
+- [Head First Design Patterns: A Brain-Friendly Guide](https://github.com/Abd-Beltaji/design-patterns-in-arabic/blob/master/resources/Head%20First%20Design%20Patterns.pdf) _( Book )_
 - [remembering "The Gang of four..!"](https://devrant.com/rants/1641491/programming-design-patterns-part-1-remembering-the-gang-of-four) _( Cheat-sheet )_
 - [Useful posters of the GoF patterns](http://www.celinio.net/techblog/?p=65) _( Cheat-sheet )_
 - [Design-patterns-Relationships](https://github.com/Abd-Beltaji/design-patterns-in-arabic/blob/master/resources/Design-patterns-Relationships.jpg) _( Cheat-sheet )_

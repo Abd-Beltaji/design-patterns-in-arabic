@@ -66,6 +66,8 @@ public class Main{
 
 فيصبح لدينا `Add.java` بالشكل التالي:
 
+> يمكنك تحميل الكود كاملاً من <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FAbd-Beltaji%2Fdesign-patterns-in-arabic%2Ftree%2Fmaster%2FJava%2FBehavioural%2FCommand%2FExamples%2FCalculator">هنا</a>
+
 ```JAVA
 public class Add implements Command {
     private int value;

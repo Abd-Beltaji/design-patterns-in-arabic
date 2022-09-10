@@ -6,6 +6,12 @@
 
 > _**Command**_ (EN) == **_أمر_** (العربية)
 
+## تعريف:
+
+```TXT
+The command pattern is a behavioral design pattern in which an object is used to encapsulate all information needed to perform an action or trigger an event at a later time. This information includes the method name, the object that owns the method and values for the method parameters.
+```
+
 ## شرح مبسط 🧮
 
 لو طلب منك أن تقوم بتصميم برنامج الة حاسبة بسيطة تقوم بالعمليات الأساسية _(جمع، طرح، ضرب، قسمة)_ سيكون بهذا الشكل غالباً:

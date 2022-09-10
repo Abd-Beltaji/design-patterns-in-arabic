@@ -12,11 +12,52 @@
     <img src="https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat" alt="Contributions (Welcome)"/>
 </p>
 
-> <u>تعريف **Design patterns:**</u> هي عبارة عن حلول لمشاكل متكررة، وتشكل قواعد إرشادية لكيفية التعامل مع تلك المشاكل المحددة.
+# فهرس الحتويات:
+
+- [Design Patterns](#design-patterns)
+- [فهرس الحتويات:](#فهرس-الحتويات)
+  - [تعريف **Design patterns:**](#تعريف-design-patterns)
+  - [نقاط مهمة ⚠](#نقاط-مهمة-)
+  - [لماذا أستخدم ال Design patterns ؟ 🤔](#لماذا-أستخدم-ال-design-patterns--)
+  - [كيف تم التوصل إليهم، ومن هم الذين توصلوا إليهم ؟ 👨‍🏫](#كيف-تم-التوصل-إليهم-ومن-هم-الذين-توصلوا-إليهم--)
+  - [أقسام ال design patterns :](#أقسام-ال-design-patterns-)
+    - [حسب الغاية:](#حسب-الغاية)
+      - [Creational:](#creational)
+      - [Structural:](#structural)
+      - [Beahavioral:](#beahavioral)
+    - [حسب المجال:](#حسب-المجال)
+      - [مجال ال Class:](#مجال-ال-class)
+      - [مجال ال Object:](#مجال-ال-object)
+- [Creational Design patterns:](#creational-design-patterns)
+  - [نقاط مهمة: 🧩](#نقاط-مهمة--1)
+  - [تقسيم Creational Design Patterns حسب ال scope:](#تقسيم-creational-design-patterns-حسب-ال-scope)
+    - [Class Scope:](#class-scope)
+    - [Object Scope:](#object-scope)
+  - [Singleton 💍](#singleton-)
+    - [تعريف:](#تعريف)
+    - [شرح مبسط 🎲](#شرح-مبسط-)
+    - [كيف يتم تكوين كلاس ب Singleton Design pattern ? 🏗](#كيف-يتم-تكوين-كلاس-ب-singleton-design-pattern--)
+  - [Simple Factory Design Pattern 🏭](#simple-factory-design-pattern-)
+    - [تعريف:](#تعريف-1)
+    - [شرح مبسط 🍰](#شرح-مبسط--1)
+    - [مثال 🖼](#مثال-)
+    - [أمثلة 🎈](#أمثلة-)
+- [Beahvioral Patterns:](#beahvioral-patterns)
+  - [نقاط مهمة: ⚠](#نقاط-مهمة--2)
+  - [Command Design Pattern 🖇](#command-design-pattern-)
+    - [تعريف:](#تعريف-2)
+    - [شرح مبسط 🧮](#شرح-مبسط--2)
+  - [Observer Design Pattern 🔭](#observer-design-pattern-)
+    - [تعريف:](#تعريف-3)
+    - [شرح مبسط ☁](#شرح-مبسط--3)
+    - [تنفيذ المثال 🌡](#تنفيذ-المثال-)
+- [مصادر مفيدة 💾](#مصادر-مفيدة-)
+
+> تعريف **Design patterns:** هي عبارة عن حلول لمشاكل متكررة، وتشكل قواعد إرشادية لكيفية التعامل مع تلك المشاكل المحددة.
 
 > هي ليست عبارة عن `Classes` ولا `Packages` ولا أي مكتبات أو أكواد جاهزة بحيث يتم استخدامها مباشرة بداخل الكود الخاص بك، في المقابل ما هي إلا أساليب متبعة لحل المشاكل المتكررة التي يمكن أن تواجهها خلال عملية كتابة الكود.
 
-## <u>تعريف **Design patterns:**</u>
+## تعريف **Design patterns:**
 
 ```txt
 In software engineering, a software design pattern is a general reusable solution to a commonly occurring problem within a given context in software design. It is not a finished design that can be transformed directly into source or machine code. It is a description or template for how to solve a problem that can be used in many different situations.
@@ -164,7 +205,7 @@ public static void main (String[]args)
 
 لذلك، وبعد تغير هيكلية الكود باستخدام Singleton Design Pattern:
 
-> يمكن  تحميل الكود كاملاً من <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FAbd-Beltaji%2Fdesign-patterns-in-arabic%2Ftree%2Fmaster%2FJava%2FCreational%2FSingleton%2FExamples%2FRandom">هنا</a>
+> يمكن تحميل الكود كاملاً من <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FAbd-Beltaji%2Fdesign-patterns-in-arabic%2Ftree%2Fmaster%2FJava%2FCreational%2FSingleton%2FExamples%2FRandom">هنا</a>
 
 ```Java
 class Random {
@@ -244,7 +285,7 @@ public class Main {
 
 ### مثال 🖼
 
-> يمكن  تحميل الكود كاملاً من <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FAbd-Beltaji%2Fdesign-patterns-in-arabic%2Ftree%2Fmaster%2FJava%2FCreational%2FSimple-Factory%2FExamples%2FCake">هنا</a>
+> يمكن تحميل الكود كاملاً من <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FAbd-Beltaji%2Fdesign-patterns-in-arabic%2Ftree%2Fmaster%2FJava%2FCreational%2FSimple-Factory%2FExamples%2FCake">هنا</a>
 
 لو طبقنا المثال الذي تم ذكره سابقاً، بشكل برمجي، سيكون شكله بالشكل التالي:
 

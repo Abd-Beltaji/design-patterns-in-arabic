@@ -20,7 +20,7 @@
 
 ## تطبيق على مثال السيارة 🚗
 
-> يمكن تحميل الكود كاملاً من <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FAbd-Beltaji%2Fdesign-patterns-in-arabic%2Ftree%2Fmaster%2FJava%2FCreational%2FSingleton%2FExamples%2FRandom">هنا</a>
+> يمكن تحميل الكود كاملاً من <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FAbd-Beltaji%2Fdesign-patterns-in-arabic%2Ftree%2Fmaster%2FJava%2FStructural%2FComposite%2FExamples%2FCar">هنا</a>
 
 _CarElement.java_:
 
@@ -195,3 +195,5 @@ The part Model: (NGK Spark plug), price (80.0)
 ================================
 ================================
 ```
+
+استطعنا من خلال تطبيق ال Composite pattern من التعامل مع أي شجرة فرعية (عنصر ومجموعة العناصر المكونة له) بشكل منفصل، والخحصول على المعلومات الخاصة بهم بكل سهولة،.

@@ -42,14 +42,25 @@
     - [شرح مبسط 🍰](#شرح-مبسط--1)
     - [مثال 🖼](#مثال-)
     - [أمثلة 🎈](#أمثلة-)
-- [Beahvioral Patterns:](#beahvioral-patterns)
+- [Structural Patterns:](#structural-patterns)
   - [نقاط مهمة: ⚠](#نقاط-مهمة--2)
-  - [Command Design Pattern 🖇](#command-design-pattern-)
+  - [Adapter Design pattern 🔌](#adapter-design-pattern-)
     - [تعريف:](#تعريف-2)
-    - [شرح مبسط 🧮](#شرح-مبسط--2)
-  - [Observer Design Pattern 🔭](#observer-design-pattern-)
+    - [ماذا يعني مصطلح _Adapter_?](#ماذا-يعني-مصطلح-adapter)
+    - [Open-Closed Principal](#open-closed-principal)
+    - [شرح مبسط 🐈](#شرح-مبسط--2)
+  - [Composite Design pattern 🧱](#composite-design-pattern-)
     - [تعريف:](#تعريف-3)
-    - [شرح مبسط ☁](#شرح-مبسط--3)
+    - [شرح مبسط 🚗](#شرح-مبسط--3)
+    - [تطبيق على مثال السيارة 🚗](#تطبيق-على-مثال-السيارة-)
+- [Beahvioral Patterns:](#beahvioral-patterns)
+  - [نقاط مهمة: ⚠](#نقاط-مهمة--3)
+  - [Command Design Pattern 🖇](#command-design-pattern-)
+    - [تعريف:](#تعريف-4)
+    - [شرح مبسط 🧮](#شرح-مبسط--4)
+  - [Observer Design Pattern 🔭](#observer-design-pattern-)
+    - [تعريف:](#تعريف-5)
+    - [شرح مبسط ☁](#شرح-مبسط--5)
     - [تنفيذ المثال 🌡](#تنفيذ-المثال-)
 - [مصادر مفيدة 💾](#مصادر-مفيدة-)
 
@@ -385,6 +396,323 @@ public class Main {
 
 - [Cake Example](https://github.com/Abd-Beltaji/design-patterns-in-arabic/tree/master/Java/Creational/Simple-Factory/Examples/Cake)
 - [Shapes Example](https://github.com/Abd-Beltaji/design-patterns-in-arabic/tree/master/Java/Creational/Simple-Factory/Examples/Shapes)
+
+# Structural Patterns:
+
+تهتم بالية تجمع ال Classes و ال Objects في تكوين أكبر.
+
+## نقاط مهمة: ⚠
+
+- ال `Structural Class paatterns` تستخدم مبادىء الوراثة فيتكوين ال `interfaces` أو ال `Classes`.
+- ال `Structural Object Patterns` تصف الية تجمع أكثر من أوبجكت للحصول على وظائف جديدة.
+- تعطي ال `Structural Object Patterns` نوعاً من المرونة في عملية ال Composition للأوبجكت، وذلك نابع من القدرة على تغيير ال Composition في أثناء التنفيذ (Dynamically).
+
+## Adapter Design pattern 🔌
+
+### تعريف:
+
+```TXT
+In software engineering, the adapter pattern is a software design pattern (also known as wrapper, an alternative naming shared with the decorator pattern) that allows the interface of an existing class to be used as another interface. It is often used to make existing classes work with others without modifying their source code.
+```
+
+### ماذا يعني مصطلح _Adapter_?
+
+يقصد بها وسيط، يأتي بين شيئين غير متوافقين ليقوم بعملية الربط بينهما، ففي الحياة الواقعية على سبيل المثال، لو قمت بالسفر إلى دولة أخرى قد تجد بأن شاحن هاتفك لا يتوافق مع القابس المتواجد هناك، فستحتاج إلى وسيط (Adapter) ليمكنك أن تقوم بالربط بينهما، واللذي سيكون شكله هكذا:
+
+<img src="https://github.com/Abd-Beltaji/design-patterns-in-arabic/raw/master/assets/Adapter.jpeg" alt="Adapter example">
+
+وبالمثل في عالم ال Software Engineering, لدينا ما يسمى بال Adapter Design pattern, بحيث يقوم على أنشاء كلاس منفصل يعمل كوسيط بين كلاسين غير متوافقين.
+
+### Open-Closed Principal
+
+قد يتبادر للذهن تساؤل، بأنه لماذا لا يمكننا تعديل أحد ال classes الغير متوافقة بحيث تسبح متوافقة؟
+
+الإجابة تكمن في مبدأ يسمى ب `Open-Closed Principal`.
+
+> **"** Objects or entities should be open for extension but closed for modification **"**
+
+يعتمد هذا المبدأ على أنه يجب أن يكون ال Objects و ال Entites مفتوحة للتنفيذ ولكن مغلقة للتعديل، بحيث أنه لا يحق لك كمهندس أن تقوم بالتعديل على أي شيء، فقد يكون الكود الذي تستعمله مكتوب من قبل شخص أخر ولا يسمح لك بالتعديل عليه، أو قد يكون مقدم لك مثلاً عن طريق مكتبة أو أي مصدر خارجي ولا يمكنك الوصل إليه وتعديله، فهنا يتضح أهمية ال Adapter في ال Design patterns.
+
+### شرح مبسط 🐈
+
+لنفترض بأننا نريد أن نقوم بتوضيح عا~لة السنوريات (Felidae / القططيات) برمجياً، ولكننا في التطبيق واجهنا مشكلة، بحيث جميع أفراد هذه العائلة من الكائنات (الأسود، النمور، ... الخ) تقوم بعملية الزئير، ولكن يبقى لنا استثناء وهو القطط، فهي لا تقوم بالزئير، بل تقوم بالمواء، فلا يمكننا أن نجعل القطط أبناء مباشرة لل `Felidae`، بل نحتاج إلى وسيط يقوم بربط عملية المواء لدى القطة بعملية الزئير لدى النوع الرئيس `Felidae`, فنحتاج إلى تصميم كلاس أخر `CarAdapter` ليقوم بهذا الغرض، ويمكننا اعتباره من ثم ابناً مباشراً للسنوريات.
+
+فلو طبقنا المثال السابق برمجياً:
+
+> يمكن تحميل الكود كاملاً من <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FAbd-Beltaji%2Fdesign-patterns-in-arabic%2Ftree%2Fmaster%2FJava%2FStructural%2FAdapter%2FExamples%2FFelidae">هنا</a>
+
+_Felidae.java_:
+
+```JAVA
+public interface Felidae{
+    public void roar();
+}
+```
+
+_Lion.java_:
+
+```JAVA
+public class Lion implements Felidae {
+    public void roar(){
+        System.out.println("The lion is Roaring!");
+    }    
+}
+```
+
+_Tiger.java_:
+
+```JAVA
+public class Tiger implements Felidae{
+    public void roar(){
+        System.out.println("The tiger is Roaring!");
+    }    
+}
+```
+
+_Cat.java_:
+
+```JAVA
+public class Cat {
+    public void meow(){
+        System.out.println("The cat is meowing!");
+    }
+}
+```
+
+_CatAdapter.java_:
+
+```JAVA
+public class CatAdapter implements Felidae {
+    private Cat cat;
+
+    public CatAdapter(Cat cat){
+        this.cat = cat;
+    }
+    public void roar(){
+        this.cat.meow();
+    }
+}
+```
+
+يمكننا الأن تجريب الكود وتنفيذه:
+
+```JAVA
+public class Main {
+    public static void main(String[] args) {
+        Felidae lion = new Lion();
+        Felidae tiger = new Tiger();
+        Felidae cat = new CatAdapter(new Cat());
+
+        lion.roar();
+        tiger.roar();
+        cat.roar();
+    }
+}
+```
+
+ليكون الناتج:
+
+```TXT
+The lion is Roaring!
+The tiger is Roaring!
+The cat is meowing!
+```
+
+## Composite Design pattern 🧱
+
+### تعريف:
+
+```TXT
+ The composite pattern is a partitioning design pattern. The composite pattern describes a group of objects that are treated the same way as a single instance of the same type of object. The intent of a composite is to "compose" objects into tree structures to represent part-whole hierarchies.
+```
+
+### شرح مبسط 🚗
+
+لنفترض بأننا نريد بأن نقوم بتوضيح تركيب السيارة باسلوب برمجي، قد يكون تفكيرنا الأولي أن يكون لدينا كل شيء يكونها عبارة عن Object منفصل، بحيث يكون لدينا أوبجكت خاص من نوع Engine و أوبجكت أخر من نوع CarBody وأوبجكت اخر من نوع هكذا، ولكن هذا يؤدي إلى فوضى، فعلى سبيل من المثال، لو أردنا مثلاً أن نقوم بحساب التكلفة الخاصة بالمحرك كتكلفة كلية، بحيث يتم حساب تكلفة جميع المكونات الداخلية له، ولكن بهذا الشكل وهذه الفوضى من الصعب القيام بمثل هذه الأمور، فهنا تكمن قوة ال `Composite Design pattern` بحيث يمكننا تخيل السيارة بشكل أفضل بالشكل الاتي:
+
+<img src="https://github.com/Abd-Beltaji/design-patterns-in-arabic/raw/master/assets/Car-composite-parts.png" alt="Car composition illustration"  />
+
+فبهذا الشكل يمكنني أن أقوم بتقسيم الشيء إلى مخطط شجري بحيث يمكنني من معرفة المكونات لكل جزء بشكل تتابعي، فمكونات السيارة مثلا، هي `هيكل السيارة`، و`المحرك` ومن ثم مكن تقسيم مكونات المحرك مثلاً، إلى `غرف احتراق` و `شمعاات الاحتراق (بوجيهات)`، وكذلك يمكننا تقسيم هيكل السيارة إلى `أبواب`و `إطارات`، بحيث يحتوي كل Object على قائمة من ال Objects التي تعد مكونات لهذا ال Object الرئيس، فيمكنني من خلال هذه الهيكلية الوصول إلى تفاصيل أي مكون بالإضافة لمكوناته الفرعية بكل سهولة.
+
+### تطبيق على مثال السيارة 🚗
+
+> يمكن تحميل الكود كاملاً من <a href="https://download-directory.github.io/?url=https%3A%2F%2Fgithub.com%2FAbd-Beltaji%2Fdesign-patterns-in-arabic%2Ftree%2Fmaster%2FJava%2FStructural%2FComposite%2FExamples%2FCar">هنا</a>
+
+_CarElement.java_:
+
+```JAVA
+public interface CarElement {
+    float getPrice();
+    void printDetails();
+}
+```
+
+_CarPart.java_:
+
+```JAVA
+public class CarPart implements CarElement{
+    String model;
+    float price;
+
+    public CarPart(String model, float price) {
+        this.model = model;
+        this.price = price;
+    }
+
+    String getModel() {
+        return this.model;
+    }
+
+    public float getPrice() {
+        return this.price;
+    }
+
+    public void printDetails() {
+        System.out.println("The part Model: (" + this.model + "), price (" + this.getPrice() + ")");
+    }
+}
+```
+
+_CarComposite.java_:
+
+```JAVA
+import java.util.ArrayList;
+import java.util.List;
+
+public class CarComposite implements CarElement {
+    String model;
+    List<CarElement> parts;
+
+    public CarComposite(String model) {
+        parts = new ArrayList<>();
+        this.model = model;
+    }
+
+    String getModel() {
+        return this.model;
+    }
+
+    void addPart(CarElement part) {
+        this.parts.add(part);
+    }
+
+    public float getPrice() {
+        float price = 0;
+        for (CarElement p : parts)
+            price += p.getPrice();
+        return price;
+    }
+
+    public void printDetails() {
+        System.out.println("The part Model: (" + this.model + "), price (" + this.getPrice() + ")");
+        if (!parts.isEmpty()) {
+            System.out.println("It has the following sub-parts: ");
+            for (CarElement p : parts)
+                p.printDetails();
+        }
+        System.out.println("================================");
+    }
+}
+```
+
+ويمكننا التطبيق بالشكل الاتي:
+
+```JAVA
+package Java.Structural.Composite.Examples.Car;
+
+public class Main {
+    public static void main(String[] args) {
+        CarComposite car = new CarComposite("Audi R8");
+
+        CarComposite engine = new CarComposite("5.2L V10 FSI");
+        CarComposite carBody = new CarComposite("Audi R8 Body");
+
+        CarPart wheel1 = new CarPart("Audi R8 Wheels", 2400);
+        CarPart wheel2 = new CarPart("Audi R8 Wheels", 2400);
+        CarPart wheel3 = new CarPart("Audi R8 Wheels", 2400);
+        CarPart wheel4 = new CarPart("Audi R8 Wheels", 2400);
+
+        carBody.addPart(wheel1);
+        carBody.addPart(wheel2);
+        carBody.addPart(wheel3);
+        carBody.addPart(wheel4);
+
+        CarPart door1 = new CarPart("Audi R8 Door", 5000);
+        CarPart door2 = new CarPart("Audi R8 Door", 5000);
+
+        carBody.addPart(door1);
+        carBody.addPart(door2);
+
+        CarPart piston1 = new CarPart("V10 Piston", 1500);
+        CarPart piston2 = new CarPart("V10 Piston", 1500);
+        CarPart piston3 = new CarPart("V10 Piston", 1500);
+        CarPart piston4 = new CarPart("V10 Piston", 1500);
+        CarPart piston5 = new CarPart("V10 Piston", 1500);
+        CarPart piston6 = new CarPart("V10 Piston", 1500);
+
+        engine.addPart(piston1);
+        engine.addPart(piston2);
+        engine.addPart(piston3);
+        engine.addPart(piston4);
+        engine.addPart(piston5);
+        engine.addPart(piston6);
+
+        CarPart sparkPlug1 = new CarPart("NGK Spark plug", 80);
+        CarPart sparkPlug2 = new CarPart("NGK Spark plug", 80);
+        CarPart sparkPlug3 = new CarPart("NGK Spark plug", 80);
+        CarPart sparkPlug4 = new CarPart("NGK Spark plug", 80);
+        CarPart sparkPlug5 = new CarPart("NGK Spark plug", 80);
+        CarPart sparkPlug6 = new CarPart("NGK Spark plug", 80);
+
+        engine.addPart(sparkPlug1);
+        engine.addPart(sparkPlug2);
+        engine.addPart(sparkPlug3);
+        engine.addPart(sparkPlug4);
+        engine.addPart(sparkPlug5);
+        engine.addPart(sparkPlug6);
+
+        car.addPart(carBody);
+        car.addPart(engine);
+
+
+        car.printDetails();
+    }
+}
+```
+
+ويكون الناتج:
+
+```TXT
+The part Model: (Audi R8), price (29080.0)
+It has the following sub-parts:
+The part Model: (Audi R8 Body), price (19600.0) 
+It has the following sub-parts:
+The part Model: (Audi R8 Wheels), price (2400.0)
+The part Model: (Audi R8 Wheels), price (2400.0)
+The part Model: (Audi R8 Wheels), price (2400.0)
+The part Model: (Audi R8 Wheels), price (2400.0)
+The part Model: (Audi R8 Door), price (5000.0)
+The part Model: (Audi R8 Door), price (5000.0)
+================================
+The part Model: (5.2L V10 FSI), price (9480.0)
+It has the following sub-parts:
+The part Model: (V10 Piston), price (1500.0)
+The part Model: (V10 Piston), price (1500.0)
+The part Model: (V10 Piston), price (1500.0)
+The part Model: (V10 Piston), price (1500.0)
+The part Model: (V10 Piston), price (1500.0)
+The part Model: (V10 Piston), price (1500.0)
+The part Model: (NGK Spark plug), price (80.0)
+The part Model: (NGK Spark plug), price (80.0)
+The part Model: (NGK Spark plug), price (80.0)
+The part Model: (NGK Spark plug), price (80.0)
+The part Model: (NGK Spark plug), price (80.0)
+The part Model: (NGK Spark plug), price (80.0)
+================================
+================================
+```
+
+استطعنا من خلال تطبيق ال Composite pattern من التعامل مع أي شجرة فرعية (عنصر ومجموعة العناصر المكونة له) بشكل منفصل، والخحصول على المعلومات الخاصة بهم بكل سهولة،.
 
 # Beahvioral Patterns:
 

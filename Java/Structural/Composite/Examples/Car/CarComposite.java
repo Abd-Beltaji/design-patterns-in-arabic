@@ -1,5 +1,3 @@
-package Java.Structural.Composite.Examples.Car;
-
 import java.util.ArrayList;
 import java.util.List;
 

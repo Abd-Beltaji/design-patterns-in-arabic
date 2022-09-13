@@ -1,5 +1,3 @@
-package Java.Structural.Composite.Examples.Car;
-
 public class CarPart implements CarElement{
     String model;
     float price;

@@ -1,5 +1,3 @@
-package Java.Structural.Composite.Examples.Car;
-
 public class Main {
     public static void main(String[] args) {
         CarComposite car = new CarComposite("Audi R8");
